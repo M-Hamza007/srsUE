@@ -7,7 +7,7 @@ ip netns list | grep "ue1" > /dev/null
 
 if [ $? -eq 1 ]; then
     echo creating netspace ue1...
-    sudo ip netns add ue1
+    ip netns add ue1
     if [ $? -ne 0 ]; then
     echo failed to create netns ue1
     exit 1
