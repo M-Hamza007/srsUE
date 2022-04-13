@@ -58,7 +58,7 @@ ADD conf/. /etc/srsran/
 
 
 # Add launcher script
-ADD run.sh /srsRAN/build/srsue/src/
+ADD run.sh /
 
 ADD launcher.sh /
 
