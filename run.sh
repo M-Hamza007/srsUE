@@ -5,13 +5,17 @@ ZMQ_ARGS="--rf.device_name=zmq --rf.device_args=\"${PORT_ARGS},id=ue,base_srate=
 ## Create netns for UE
 ip netns list | grep "ue1" > /dev/null
 
-if [ $? -eq 1 ]; then
-    echo creating netspace ue1...
-    ip netns add ue1
-    if [ $? -ne 0 ]; then
-    echo failed to create netns ue1
-    exit 1
-    fi
+# if [ $? -eq 1 ]; then
+#     echo creating netspace ue1...
+#     ip netns add ue1
+#     if [ $? -ne 0 ]; then
+#     echo failed to create netns ue1
+#     exit 1
+#     fi
+# fi
+
+if [ $? -ne 0 ]; then
+    echo ue already exit
 fi
 
 srsue ue.conf ${LOG_PARAMS} ${ZMQ_ARGS} --rat.eutra.dl_earfcn=2850 "$@"
