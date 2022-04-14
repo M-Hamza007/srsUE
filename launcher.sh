@@ -1,20 +1,14 @@
 #!/bin/bash
 
-# _term() {
-#     echo "Caught SIGTERM signal!"
-#     kill -TERM "$child"
-# }
+_term() {
+    echo "Caught SIGTERM signal!"
+    kill -TERM "$child"
+}
 
-# trap _term SIGTERM
-
-# chmod +x ./run.sh
-
-# chmod -R 777 ./run.sh
-
-# cp ./run.sh /srsRAN/build/srsue/src/
+trap _term SIGTERM
 
 ./srsRAN/build/srsue/src/srsue
 
-# child=$!
+child=$!
 
-# wait "$child"
+wait "$child"

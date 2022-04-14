@@ -46,20 +46,7 @@ RUN git clone https://github.com/5g-empower/srsRAN.git && \
 # Add configuration files from SRS
 ADD conf/. /etc/srsran/
 
-# Add Kubernetes launch scripts
-# ADD dns_replace.sh /
-
-# Set env variables
-# ENV enb_id=0x19B01
-# ENV mcc=901
-# ENV mnc=70
-# ENV n_prb=50
-# ENV mme_addr = EPC_REPLACE
-
-
 # Add launcher script
-# ADD run.sh /
-
 ADD launcher.sh /
 
 # Run the launcher script
