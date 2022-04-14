@@ -9,9 +9,9 @@
 
 chmod +x ./run.sh
 
-cp ./run.sh /srsRAN/build/srsue/src/
+chmod 777 ./run.sh
 
-ip netns add ue1
+cp ./run.sh /srsRAN/build/srsue/src/
 
 ./srsRAN/build/srsue/src/run.sh
 
