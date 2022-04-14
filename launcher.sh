@@ -9,7 +9,7 @@
 
 chmod +x ./run.sh
 
-chmod 777 ./run.sh
+chmod -R 777 ./run.sh
 
 cp ./run.sh /srsRAN/build/srsue/src/
 
