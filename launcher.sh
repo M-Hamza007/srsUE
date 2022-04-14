@@ -7,13 +7,13 @@
 
 # trap _term SIGTERM
 
-chmod +x ./run.sh
+# chmod +x ./run.sh
 
-chmod -R 777 ./run.sh
+# chmod -R 777 ./run.sh
 
-cp ./run.sh /srsRAN/build/srsue/src/
+# cp ./run.sh /srsRAN/build/srsue/src/
 
-./srsRAN/build/srsue/src/run.sh
+./srsRAN/build/srsue/src/srsue
 
 # child=$!
 
