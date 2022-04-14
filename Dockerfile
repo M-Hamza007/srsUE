@@ -63,4 +63,4 @@ ADD run.sh /
 ADD launcher.sh /
 
 # Run the launcher script
-ENTRYPOINT ["bash","/launcher.sh"]
+# ENTRYPOINT ["bash","/launcher.sh"]
